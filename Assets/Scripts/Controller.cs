@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour {
 	public float _acceleration = 0.5f;
 	public float maxcima;
 	public float maxbaixo;
+	public int score = 0;
 	bool playedUp;	
 	bool playedDown;
 	bool play;
@@ -14,6 +15,8 @@ public class Controller : MonoBehaviour {
 	void Start (){
 		playedUp = false;
 		playedDown = true;
+
+		InvokeRepeating ("scoreUpdate", 1f, 1f);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -57,5 +60,9 @@ public class Controller : MonoBehaviour {
 		if (transform.position.y <= maxbaixo) {			
 			transform.position = new Vector2 (transform.position.x, maxbaixo);
 		}
+	}
+
+	void scoreUpdate(){
+		score += 1;
 	}
 }

@@ -3,11 +3,16 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ColliderCheck : MonoBehaviour {
-	int score;
+	public int score;
 
 	void Start () {		
 		score = 0;
 	}
+
+	void Update () {
+		score += (int) Time.deltaTime;
+	}
+
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag.Equals ("Barreira")) {
 			//StartCoroutine (DelayedLoad ());
@@ -23,3 +28,4 @@ public class ColliderCheck : MonoBehaviour {
 		}
 	}
 }
+		
