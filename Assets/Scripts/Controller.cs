@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour {
 
 		} else {
 			playedUp = false;
-			GetComponent<Rigidbody2D> ().velocity = velocityBall * _acceleration/2;	
+			GetComponent<Rigidbody2D> ().velocity = velocityBall * _acceleration/1.5f;	
 			if (!playedDown && play){		
 				play = false;
 			}
