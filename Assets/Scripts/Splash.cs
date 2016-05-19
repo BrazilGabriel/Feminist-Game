@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Splash : MonoBehaviour {
-
-	IEnumerator splashLogo() {
-		yield return new WaitForSeconds (2);
-		SceneManager.LoadScene ("Menu");
-	}
-
+	
+	public float timer = 1f;
+	public string levelToLoad = "Menu";
+	
+	
+	// Use this for initialization
 	void Start () {
-		StartCoroutine (splashLogo());
+		StartCoroutine ("DisplayScene");
 	}
 	
+	IEnumerator DisplayScene(){
+		yield return new WaitForSeconds(timer);
+		Application.LoadLevel (levelToLoad);
+	}
 }
