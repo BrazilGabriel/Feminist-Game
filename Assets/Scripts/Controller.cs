@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour {
 	public float _acceleration = 0.5f;
 	public float maxcima;
 	public float maxbaixo;
-	public int score = 0;
+	public static int score = 0;
 	bool playedUp;	
 	bool playedDown;
 	bool play;
