@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour {
 	void Start (){
 		playedUp = false;
 		playedDown = true;
+        score = 0;
 
 		InvokeRepeating ("scoreUpdate", 1f, 1f);
 	}

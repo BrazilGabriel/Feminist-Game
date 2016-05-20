@@ -8,10 +8,10 @@ public class ColliderCheck : MonoBehaviour {
 
     public void Awake()
     {
-    }
-	void Start () {		
 		score = 0;
         dead = false;
+    }
+	void Start () {		
 	}
 
 	void Update () {
@@ -24,8 +24,8 @@ public class ColliderCheck : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.gameObject.tag.Equals ("Barreira")) {
             //StartCoroutine (DelayedLoad ());
-			SaveScore();
             dead = true;
+			SaveScore();
             Time.timeScale = 0;
 
             //	Application.LoadLevel(Application.loadedLevel);
