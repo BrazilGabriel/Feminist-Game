@@ -8,6 +8,7 @@ public class Controller : MonoBehaviour {
 	public float maxcima;
 	public float maxbaixo;
 	public static int score = 0;
+	public static int highScore = 0;
 	bool playedUp;	
 	bool playedDown;
 	bool play;
@@ -17,7 +18,7 @@ public class Controller : MonoBehaviour {
 		playedDown = true;
         score = 0;
 
-		InvokeRepeating ("scoreUpdate", 1f, 1f);
+		InvokeRepeating ("scoreUpdate", 0.5f, 0.5f);
 	}
 	// Update is called once per frame
 	void Update () {

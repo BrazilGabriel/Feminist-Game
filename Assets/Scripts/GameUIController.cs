@@ -28,8 +28,8 @@ public class GameUIController : MonoBehaviour
 
     void Update()
     {
-        gameScore.text = Controller.score.ToString();
-        gameHighScore.text = PlayerPrefs.GetInt("highScore").ToString();
+        gameScore.text = "Score: " + Controller.score.ToString() + "M";
+        gameHighScore.text = "HighScore: " + PlayerPrefs.GetInt("highScore").ToString() + "M";
     }
 
 
@@ -96,9 +96,9 @@ public class GameUIController : MonoBehaviour
     public void showScore()
     {
         //Svar score = 0;
-        scoreText.text = Controller.score.ToString();
+		scoreText.text = "Score: "+ Controller.score.ToString() + "M";
        // score = PlayerPrefs.GetInt("highScore");
-        highScoreText.text = PlayerPrefs.GetInt("highScore").ToString();
+		highScoreText.text = "HighScore: " + PlayerPrefs.GetInt("highScore").ToString() + "M";
     }
 
 }

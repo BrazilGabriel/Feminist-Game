@@ -33,6 +33,7 @@ public class ColliderCheck : MonoBehaviour {
 	}
 	
 	public void SaveScore(){
+		score = Controller.score;
 		PlayerPrefs.SetInt("currentScore", score);
 		if (PlayerPrefs.GetInt("currentScore") > PlayerPrefs.GetInt("highScore")){
 			PlayerPrefs.SetInt("highScore", PlayerPrefs.GetInt("currentScore"));
